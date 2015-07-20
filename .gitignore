@@ -1,0 +1,6 @@
+build/
+build_rpi/
+dpkg/
+rpi/
+.idea/
+pi.cmake

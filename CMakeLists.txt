@@ -13,9 +13,10 @@ pkg_check_modules(XML2 REQUIRED libxml-2.0)
 
 include_directories(${XML2_INCLUDE_DIRS})
 
-set(CMAKE_INSTALL_PREFIX "/home/marcin/Projekty/CSpeedTestClion/build/")
+#set(CMAKE_INSTALL_PREFIX "/home/marcin/Projekty/CSpeedTestClion/build/")
 
 add_subdirectory(libspeedtest)
 set(SOURCE_FILES main.c)
 add_executable(speed-test-client ${SOURCE_FILES} cli.h cli.c)
 target_link_libraries(speed-test-client speedtest)
+install(TARGETS speed-test-client DESTINATION bin)

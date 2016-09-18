@@ -23,7 +23,7 @@ SpeedTestResult speed_test_request_get_servers_list() {
         return speed_test_create_result_posix_error(SPEED_TEST_ERROR_CURL_INIT);
     }
 
-    curl_easy_setopt(curl, CURLOPT_URL, "http://www.speedtest.net/speedtest-servers-static.php");
+    curl_easy_setopt(curl, CURLOPT_URL, "http://c.speedtest.net/speedtest-servers-static.php");
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
     curl_easy_setopt(curl, CURLOPT_USERAGENT, "speedtest/0.1.0");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
